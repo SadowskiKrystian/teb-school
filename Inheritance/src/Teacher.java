@@ -47,12 +47,11 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Teacher: " +
-                "id='" + id + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", surname='" + surname + '\'' +
-                ", city='" + city + '\'' +
-                ", nationalInsuranceNumber=" + nationalInsuranceNumber +
-                '}';
+        return "Teacher: " + "\n" +
+                "-Id: " + id + "\n" +
+                "-First Name: " + firstName + "\n" +
+                "-Surname: " + surname + "\n" +
+                "-City:" + city + "\n" +
+                "-National Insurance Number: " + nationalInsuranceNumber;
     }
 }
