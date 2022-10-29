@@ -1,5 +1,4 @@
-public class Rating {
-    private int id;
+public class Rating extends Teacher {
     private int rating;
     private  String comment;
 
@@ -7,14 +6,11 @@ public class Rating {
     }
 
     public Rating(int id, int rating, String comment) {
-        this.id = id;
+        super(id);
         this.rating = rating;
         this.comment = comment;
     }
 
-    public int getId() {
-        return id;
-    }
 
     public int getRating() {
         return rating;
@@ -26,10 +22,9 @@ public class Rating {
 
     @Override
     public String toString() {
-        return "Rating{" +
-                "id=" + id +
-                ", rating=" + rating +
-                ", comment='" + comment + '\'' +
-                '}';
+        return "Rating:" + "\n" +
+                "-Id: " + getId() + "\n" +
+                "-Rating: " + rating + "\n" +
+                "-Comment: " + comment + "\n";
     }
 }

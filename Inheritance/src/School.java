@@ -1,29 +1,21 @@
-public class School {
-    private int id;
+public class School extends Teacher {
+
     private String name;
-    private String city;
     private String description;
 
     public School() {
     }
 
-    public School(int id, String name, String city, String description) {
-        this.id = id;
+    public School(int id, String city, String name, String description) {
+        super(id, city);
         this.name = name;
-        this.city = city;
         this.description = description;
     }
 
-    public int getId() {
-        return id;
-    }
+
 
     public String getName() {
         return name;
-    }
-
-    public String getCity() {
-        return city;
     }
 
     public String getDescription() {
@@ -32,11 +24,10 @@ public class School {
 
     @Override
     public String toString() {
-        return "School{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", city='" + city + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return "School:" + "\n" +
+                "-Id: " + getId() + "\n" +
+                "-Name: " + name + "\n" +
+                "-City='" + getCity() + "\n" +
+                "-Description='" + description;
     }
 }

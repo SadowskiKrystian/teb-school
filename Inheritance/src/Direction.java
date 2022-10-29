@@ -1,5 +1,4 @@
-public class Direction {
-    private int id;
+public class Direction extends Teacher{
     private String name;
     private String description;
 
@@ -7,14 +6,11 @@ public class Direction {
     }
 
     public Direction(int id, String name, String description) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.description = description;
     }
 
-    public int getId() {
-        return id;
-    }
 
     public String getName() {
         return name;
@@ -26,10 +22,9 @@ public class Direction {
 
     @Override
     public String toString() {
-        return "Direction{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return "Direction: \n" +
+                "-Id: " + getId() + "\n" +
+                "-Name: " + name + "\n" +
+                "-Description: " + description;
     }
 }

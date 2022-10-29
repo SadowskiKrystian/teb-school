@@ -8,6 +8,15 @@ public class Teacher {
     public Teacher() {
     }
 
+    public Teacher(int id) {
+        this.id = id;
+    }
+
+    public Teacher(int id, String city) {
+        this.id = id;
+        this.city = city;
+    }
+
     public Teacher(int id, String firstName, String surname, String city, int nationalInsuranceNumber) {
         this.id = id;
         this.firstName = firstName;
@@ -38,7 +47,7 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Teacher{" +
+        return "Teacher: " +
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", surname='" + surname + '\'' +
@@ -46,5 +55,4 @@ public class Teacher {
                 ", nationalInsuranceNumber=" + nationalInsuranceNumber +
                 '}';
     }
-    Object object = new Object();
 }

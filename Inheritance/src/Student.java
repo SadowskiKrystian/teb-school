@@ -1,42 +1,15 @@
-public class Student {
-    private int id;
-    private String firstName;
-    private String surname;
-    private String city;
-    private int nationalInsuranceNumber;
+public class Student extends Teacher {
+
     private String studentClass;
 
     public Student() {
     }
 
     public Student(int id, String firstName, String surname, String city, int nationalInsuranceNumber, String studentClass) {
-        this.id = id;
-        this.firstName = firstName;
-        this.surname = surname;
-        this.city = city;
-        this.nationalInsuranceNumber = nationalInsuranceNumber;
+        super(id, firstName, surname, city, nationalInsuranceNumber);
         this.studentClass = studentClass;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public int getNationalInsuranceNumber() {
-        return nationalInsuranceNumber;
-    }
 
     public String getStudentClass() {
         return studentClass;
@@ -44,13 +17,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", surname='" + surname + '\'' +
-                ", city='" + city + '\'' +
-                ", nationalInsuranceNumber=" + nationalInsuranceNumber +
-                ", studentClass='" + studentClass + '\'' +
-                '}';
+        return "Student:" + "\n" +
+                "-Id: " + getId() + "\n" +
+                "-First Name: " + getFirstName() + "\n" +
+                "-Surname: " + getSurname() + "\n" +
+                "-City: " + getCity() + "\n" +
+                "-National Insurance Number: " + getNationalInsuranceNumber() + "\n" +
+                "-Student Class: " + studentClass;
     }
 }
