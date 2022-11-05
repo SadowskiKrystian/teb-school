@@ -1,5 +1,5 @@
 public class Teacher {
-    private int id;
+    private int id = 0;
     private String firstName;
     private String surname;
     private String city;
